@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSN METALLBAU — Präzision in Metall</title>
+    <link rel="icon" href="assets/ICON.ico" sizes="64x64">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="app" class="">
+        <!-- Header -->
+        <header id="site-header">
+            <div class="header-container">
+                <div class="logo">
+                    <!-- <div class="logo-mark">HS</div> -->
+                    <img src="assets/hsn-logo.png" alt="HSN METALLBAU LOGO" style="width: 80px;">
+                    <div>
+                        <!-- <div class="logo-text">HSN METALLBAU</div>
+                        <div class="logo-tagline">Präzision | Qualität | Montage</div> -->
+                    </div>
+                </div>
+
+                <nav class="desktop-nav">
+                    <a href="index.html#home" class="active">Startseite</a>
+                    <a href="index.html#about-us">Über uns</a>
+                    <a href="index.html#services">Leistungen</a>
+                    <a href="references.html">Referenzen</a>
+                    <a href="careers.html">Karriere</a>
+                    <a href="index.html#faq">FAQ</a>
+                    <a href="index.html#contact" class="accent-btn">Kontakt</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button id="themeToggle" class="theme-toggle" aria-label="Dark mode umschalten">🌗</button>
+                    <button id="menuToggle" class="menu-toggle" aria-label="Menü öffnen">☰</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-header">
+                <div class="logo">
+                    <!-- <div class="logo-mark" style="background: rgba(255, 255, 255, 0.15)">HS</div>
+                    <div style="color: white">HSN METALLBAU</div> -->
+                    <img src="assets/hsn-logo.png" alt="HSN METALLBAU LOGO" style="width: 75px;">
+                </div>
+                <button id="closeMenu" class="close-menu">✕</button>
+            </div>
+
+            <nav class="mobile-nav">
+                <a href="index.html#home" class="active">Startseite</a>
+                <a href="index.html#about-us">Über uns</a>
+                <a href="index.html#services">Leistungen</a>
+                <a href="references.html">Referenzen</a>
+                <a href="careers.html">Karriere</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="index.html#contact">Kontakt</a>
+            </nav>
+        </div>
+
+        <!-- START MAIN -->
+        <main>
+
+
+            <!-- START REFERENCES -->
+            <section id="references" class="references-section container">
+                <div class="section-heading heading-border-accent">
+                    <span class="section-preheading">Unsere Arbeit</span>
+                    <h2 class="section-title">Referenzen</h2>
+                    <p class="section-subtitle">Entdecken Sie unsere abgeschlossenen Projekte</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="references-filter">
+                    <button class="filter-btn active" data-filter="all">Alle Anzeigen</button>
+                    <button class="filter-btn" data-filter="Türen">Türen</button>
+                    <button class="filter-btn" data-filter="Treppen">Treppen</button>
+                    <button class="filter-btn" data-filter="Geländer">Geländer</button>
+                    <button class="filter-btn" data-filter="Überdachungen&Carports">Überdachungen & Carports</button>
+                    <button class="filter-btn" data-filter="Hellenbau">Hellenbau</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="references-grid">
+                    <!-- tore (3 images) -->
+                    <div class="reference-item" data-category="Türen">
+                        <div class="reference-image">
+                            <img src="assets/tore/1.jpeg" alt="Moderne Metalltür">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Türen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Türen">
+                        <div class="reference-image">
+                            <img src="assets/tore/2.jpeg" alt="Moderne Metalltür">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Türen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Türen">
+                        <div class="reference-image">
+                            <img src="assets/tore/3.jpeg" alt="Moderne Metalltür">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Türen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- trepen (7 images) -->
+                    <div class="reference-item" data-category="Treppen">
+                        <div class="reference-image">
+                            <img src="assets/treppen/1.jpeg" alt="Treppen">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Treppen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Treppen">
+                        <div class="reference-image">
+                            <img src="assets/treppen/2.jpeg" alt="Treppen">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Treppen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Treppen">
+                        <div class="reference-image">
+                            <img src="assets/treppen/3.jpeg" alt="Treppen">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Treppen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reference-item" data-category="Treppen">
+                        <div class="reference-image">
+                            <img src="assets/treppen/4.jpeg" alt="Treppen">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Treppen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Treppen">
+                        <div class="reference-image">
+                            <img src="assets/treppen/5.jpeg" alt="Treppen">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Treppen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Treppen">
+                        <div class="reference-image">
+                            <img src="assets/treppen/6.jpeg" alt="Treppen">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Treppen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reference-item" data-category="Treppen">
+                        <div class="reference-image">
+                            <img src="assets/treppen/7.jpeg" alt="Treppen">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Treppen</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gelander (4 images) -->
+                    <div class="reference-item" data-category="Geländer">
+                        <div class="reference-image">
+                            <img src="assets/gelander/1.jpeg" alt="Geländer">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Geländer</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Geländer">
+                        <div class="reference-image">
+                            <img src="assets/gelander/2.jpeg" alt="Geländer">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Geländer</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Geländer">
+                        <div class="reference-image">
+                            <img src="assets/gelander/3.jpeg" alt="Geländer">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Geländer</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Überdachungen&Carports (4 images) -->
+                    <div class="reference-item" data-category="Überdachungen&Carports">
+                        <div class="reference-image">
+                            <img src="assets/uberdachungen & Carports/1.jpeg" alt="Überdachungen&Carports">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Überdachungen & Carports</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Überdachungen&Carports">
+                        <div class="reference-image">
+                            <img src="assets/uberdachungen & Carports/2.jpeg" alt="Überdachungen&Carports">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Überdachungen & Carports</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Überdachungen&Carports">
+                        <div class="reference-image">
+                            <img src="assets/uberdachungen & Carports/3.jpeg" alt="Überdachungen&Carports">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Überdachungen & Carports</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Überdachungen&Carports">
+                        <div class="reference-image">
+                            <img src="assets/uberdachungen & Carports/4.jpeg" alt="Überdachungen&Carports">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Überdachungen & Carports</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hellenbau (2 images) -->
+                    <div class="reference-item" data-category="Hellenbau">
+                        <div class="reference-image">
+                            <img src="assets/hallenbau/1.jpeg" alt="Hellenbau">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Hellenbau</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reference-item" data-category="Hellenbau">
+                        <div class="reference-image">
+                            <img src="assets/hallenbau/2.jpeg" alt="Hellenbau">
+                            <div class="reference-overlay">
+                                <span class="reference-category">Hellenbau</span>
+                                <button class="reference-view">Vergrößern</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lightbox Modal -->
+                <div class="lightbox">
+                    <div class="lightbox-content">
+                        <span class="lightbox-close">&times;</span>
+                        <img src="" alt="" class="lightbox-image">
+                        <div class="lightbox-caption"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- END REFERENCES -->
+
+
+
+            <!-- START FOOTER -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-brand">
+                            <div class="footer-logo">
+                                <!-- <div class="logo-mark">HS</div>
+                                <div class="logo-text">HSN METALLBAU</div> -->
+                                <img src="assets/hsn-logo.png" alt="HSN METALLBAU LOGO" style="width: 80px;">
+                            </div>
+                            <p class="footer-tagline">Präzision in Metall — Seit 2018</p>
+                        </div>
+
+                        <div class="footer-contact">
+                            <p class="footer-heading">Kontakt</p>
+                            <p>Neuenwegstraße 75, <br> 76703 Kraichtal, Germany</p>
+                            <p>+4367761186630<br>info@hsn-metallbau.de</p>
+                        </div>
+
+                        <div class="footer-legal">
+                            <p class="footer-heading">Rechtliches</p>
+                            <p>&copy; 2025 HSN METALLBAU<br>Alle Rechte vorbehalten</p>
+
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>Made with passion & love</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- END FOOTER -->
+
+            <!-- Service Detail Modals -->
+            <!-- <div id="service-modal" class="service-modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-body">
+                        
+                    </div>
+                </div>
+            </div> -->
+
+
+        </main>
+        <!-- END MAIN -->
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

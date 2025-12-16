@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HSN METALLBAU — Präzision in Metall</title>
+  <meta name="description"
+    content="HSN METALLBAU — Stahlbau, Geländer, Treppen & maßgeschneiderte Metallkonstruktionen." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #ffffff;
+      --text: #111214;
+      --muted: #6b6b6b;
+      --accent-from: #ff7e00;
+      /* orange gradient start */
+      --accent-to: #ff4800;
+      /* orange gradient end */
+      --accent-glow: 0 6px 24px rgba(255, 84, 0, 0.18);
+      --glass: rgba(255, 255, 255, 0.6);
+      --header-height: 76px;
+    }
+
+    .dark {
+      --bg: #0f1113;
+      --card: #141516;
+      --text: #f3f4f6;
+      --muted: #bdbdbd;
+      --glass: rgba(12, 12, 12, 0.5);
+    }
+
+    /* Reset */
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.45;
+      font-size: 16px;
+    }
+
+    /* Utility gradient */
+    .accent-gradient {
+      background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+    }
+
+    .accent-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .8rem 1.2rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--accent-from), var(--accent-to));
+      color: white;
+      box-shadow: var(--accent-glow);
+      text-decoration: none;
+    }
+
+    /* Header - IMPROVED */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.55));
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .dark header {
+      background: linear-gradient(180deg, rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.55));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06)
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      width: 100%
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      font-weight: 700
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: inline-grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+      font-size: 18px
+    }
+
+    .logo-text {
+      font-size: 18px;
+      transition: font-size 0.3s ease;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding: .6rem .8rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: var(--glass);
+      color: var(--accent-from);
+    }
+
+    nav a.active {
+      font-weight: 600;
+    }
+
+    /* Mobile menu */
+    .hamburger {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .hamburger:hover {
+      background: rgba(0, 0, 0, 0.05)
+    }
+
+    .dark .hamburger:hover {
+      background: rgba(255, 255, 255, 0.1)
+    }
+
+    .hamburger:focus {
+      outline: 2px solid rgba(0, 0, 0, 0.08)
+    }
+
+    /* Hero */
+    .hero {
+      padding: 48px 1rem 64px;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+      align-items: center
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.35));
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 30px rgba(15, 15, 15, 0.04)
+    }
+
+    .dark .hero-card {
+      background: linear-gradient(180deg, rgba(20, 20, 20, 0.65), rgba(20, 20, 20, 0.45))
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      margin: 0 0 .4rem
+    }
+
+    .sub {
+      color: var(--muted);
+      margin: 0 0 1rem
+    }
+
+    .hero-visual {
+      border-radius: 12px;
+      min-height: 220px;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.06)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400"><rect width="100%" height="100%" fill="%23efefef"/><g fill="none" stroke="%23d1d1d1" stroke-width="6"><path d="M0 200 Q 200 0 400 200 T 800 200"/></g></svg>');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .hero-visual .label {
+      padding: 1rem 1.2rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      font-weight: 700
+    }
+
+    .dark .hero-visual .label {
+      background: rgba(10, 10, 10, 0.7);
+      color: var(--text)
+    }
+
+    /* Services */
+    .services {
+      padding: 32px 1rem
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(11, 11, 11, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.04)
+    }
+
+    .card h3 {
+      margin: 0 0 .6rem
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    /* Projects */
+    .projects {
+      padding: 32px 1rem
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px
+    }
+
+    .project {
+      min-height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      display: block;
+      position: relative
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .6s ease
+    }
+
+    .project:hover img {
+      transform: scale(1.06)
+    }
+
+    .project .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.38));
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+      color: white
+    }
+
+    /* Contact */
+    .contact {
+      padding: 40px 1rem
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 1rem
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      background: var(--card);
+      padding: 16px;
+      border-radius: 10px
+    }
+
+    input,
+    textarea {
+      padding: .8rem;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      background: transparent;
+      color: var(--text)
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 1rem;
+      background: linear-gradient(180deg, #0b0b0b, #070707);
+      color: #eee
+    }
+
+    /* Responsive and small tweaks */
+    @media (max-width:1024px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      header {
+        padding: 0 1rem
+      }
+
+      nav a {
+        padding: .5rem .6rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width:768px) {
+      .container {
+        padding: 0
+      }
+
+      .hero {
+        padding: 28px 0 48px
+      }
+
+      nav {
+        display: none
+      }
+
+      .hamburger {
+        display: flex
+      }
+
+      .hero-inner {
+        padding: 0 1rem
+      }
+
+      .cards {
+        grid-template-columns: 1fr
+      }
+
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      header {
+        padding: 0 0.8rem;
+      }
+
+      .logo-text {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width:480px) {
+      header {
+        padding: 0 0.6rem;
+      }
+
+      .logo-text {
+        font-size: 15px;
+      }
+
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+
+      .logo .muted {
+        font-size: 10px;
+      }
+    }
+
+    /* Slide-in mobile menu */
+    .mobile-drawer {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
+      transform: translateX(100%);
+      transition: transform .36s cubic-bezier(.22, .9, .34, 1);
+      z-index: 80;
+      padding: 18px
+    }
+
+    .mobile-drawer.open {
+      transform: translateX(0)
+    }
+
+    .mobile-drawer nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 18px
+    }
+
+    .mobile-drawer a {
+      color: white;
+      font-size: 18px;
+      padding: 12px;
+      border-radius: 8px
+    }
+
+    .mobile-drawer .cta {
+      margin-top: 18px
+    }
+
+    /* Fancy header responsiveness: shrink on scroll */
+    header.shrink {
+      height: 60px
+    }
+
+    header.shrink .logo-text {
+      font-size: 16px
+    }
+
+    header.shrink .logo-mark {
+      width: 38px;
+      height: 38px;
+      font-size: 16px
+    }
+
+    /* accessibility focus */
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus {
+      outline: 3px solid rgba(255, 126, 0, 0.18);
+      outline-offset: 2px
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="">
+    <header id="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <div id="logoMark" class="logo-mark accent-gradient">HS</div>
+          <div>
+            <div class="logo-text">HSN METALLBAU</div>
+            <div class="muted" style="font-size:12px;color:var(--muted);">Präzision | Qualität | Montage</div>
+          </div>
+        </div>
+
+        <nav aria-label="Hauptnavigation">
+          <a href="#home" class="active">Home</a>
+          <a href="#services">Leistungen</a>
+          <a href="#projects">Projekte</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+
+        <div style="display:flex;align-items:center;gap:.6rem">
+          <button id="themeToggle" class="hamburger" aria-label="Toggle dark mode" title="Toggle dark mode">🌗</button>
+          <a class="accent-btn" href="#contact">Kontaktieren Sie uns</a>
+          <button id="openMenu" class="hamburger" aria-label="Menü öffnen" title="Menü öffnen">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <aside id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:.6rem">
+          <div class="logo-mark" style="background:rgba(255,255,255,0.15)">HS</div><strong style="color:white">HSN
+            METALLBAU</strong>
+        </div>
+        <button id="closeMenu" class="hamburger" style="background:transparent;color:white">✕</button>
+      </div>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Leistungen</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <div class="cta"><a class="accent-btn" href="#contact" style="display:inline-block">Angebot anfordern</a></div>
+    </aside>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-card">
+            <div
+              style="display:flex;gap:1.6rem;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap">
+              <div style="flex:1;min-width:240px">
+                <h1>HSN METALLBAU — Präzision & Verlässlichkeit in Metall</h1>
+                <p class="sub">Wir liefern maßgeschneiderte Metallbau-Lösungen: Stahlbau, Geländer, Treppen und
+                  industrielle Konstruktionen — von der Planung bis zur Montage.</p>
+                <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+                  <a class="accent-btn" href="#contact">Kostenloses Angebot</a>
+                  <a href="#projects"
+                    style="padding:.8rem 1rem;border-radius:10px;background:transparent;border:1px solid rgba(0,0,0,0.06);text-decoration:none;font-weight:600">Projekte
+                    ansehen</a>
+                </div>
+              </div>
+
+              <div style="width:420px;max-width:44%;min-width:220px">
+                <div class="hero-visual">
+                  <div class="label">Industriequalität & deutsches Handwerk</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <h2 style="margin:0 0 12px">Unsere Leistungen</h2>
+          <p class="sub" style="margin-bottom:18px">Wir bieten komplette Abläufe — Planung, Fertigung und Montage.</p>
+          <div class="cards">
+            <article class="card">
+              <h3>Stahlbau</h3>
+              <p>Projektbezogene Stahlkonstruktionen für Industrie, Hallen und Gebäude mit statischer Überprüfung.</p>
+            </article>
+            <article class="card">
+              <h3>Aluminiumkonstruktionen</h3>
+              <p>Leichte, korrosionsbeständige Lösungen für Fassaden, Verkleidungen und Sonderbau.</p>
+            </article>
+            <article class="card">
+              <h3>Geländer & Treppen</h3>
+              <p>Funktionale und ästhetische Treppen- und Geländersysteme für Innen und Außen.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 style="margin:0 0 12px">Ausgewählte Projekte</h2>
+          <p class="sub" style="margin-bottom:18px">Ein Auszug aus unserer Arbeit — Qualität, die man sehen kann.</p>
+          <div class="grid">
+            <a class="project" href="#">
+              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=60"
+                alt="Projekt 1">
+              <div class="overlay">
+                <div>Hallenkonstruktion — Stahl</div>
+              </div>
+            </a>
+            <a class="project" href="#">
+              <img src="https://images.unsplash.com/photo-1518546305927-5f5d8a0f1b60?auto=format&fit=crop&w=800&q=60"
+                alt="Projekt 2">
+              <div class="overlay">
+                <div>Aluminium-Fassade</div>
+              </div>
+            </a>
+            <a class="project" href="#">
+              <img src="https://images.unsplash.com/photo-1530026186660-850d3b3fdef8?auto=format&fit=crop&w=800&q=60"
+                alt="Projekt 3">
+              <div class="overlay">
+                <div>Treppen & Geländer</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" style="padding:24px 1rem;">
+        <div class="container" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+          <div style="flex:1;min-width:240px">
+            <h2>Warum HSN METALLBAU?</h2>
+            <ul style="margin-top:8px;color:var(--muted)">
+              <li>Deutsche Ingenieurskunst & präzise Fertigung</li>
+              <li>Transparente Angebote & pünktliche Montage</li>
+              <li>Individuelle Lösungen — von Standard bis Sonderbau</li>
+            </ul>
+          </div>
+          <div style="width:320px;min-width:220px">
+            <div
+              style="padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));">
+              <strong>Jetzt anfragen</strong>
+              <p style="margin:8px 0;color:var(--muted)">Schicken Sie uns Ihre Projekt-Anforderungen — wir melden uns
+                kurzfristig.</p>
+              <a class="accent-btn" href="#contact">Angebot anfordern</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section container">
+        <div class="container">
+          <h2>Kontakt</h2>
+          <div class="contact-grid">
+            <form onsubmit="onSubmit(event)">
+              <input name="name" placeholder="Ihr Name" required />
+              <input name="email" type="email" placeholder="E-Mail" required />
+              <input name="phone" placeholder="Telefon (optional)" />
+              <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+              <div style="display:flex;gap:.6rem;align-items:center;justify-content:flex-end;margin-top:6px">
+                <button type="submit" class="accent-btn">Absenden</button>
+              </div>
+            </form>
+
+            <div style="padding:18px;border-radius:12px;background:var(--card);min-height:200px">
+              <h3>HSN METALLBAU</h3>
+              <p style="margin:.4rem 0;color:var(--muted)">Musterstraße 1<br />12345 Musterstadt, Deutschland</p>
+              <p style="margin:.4rem 0;color:var(--muted)">Telefon: +49 123 456789<br />E-Mail: info@hsn-metallbau.de
+              </p>
+              <div style="margin-top:12px"><a href="#" style="text-decoration:none;color:var(--muted)">Datenschutz</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container"
+        style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:.6rem">
+          <div style="width:40px;height:40px;border-radius:8px" class="accent-gradient"></div>
+          <div style="color:#fff;font-weight:700">HSN METALLBAU</div>
+        </div>
+        <div style="color:#ddd;font-size:14px">© <span id="year"></span> HSN METALLBAU. Alle Rechte vorbehalten.</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Small interactive behavior: theme toggle, mobile menu, header shrink on scroll, contact form stub
+    (function () {
+      const root = document.documentElement;
+      const body = document.body;
+      const header = document.getElementById('site-header');
+      const themeToggle = document.getElementById('themeToggle');
+      const openMenu = document.getElementById('openMenu');
+      const closeMenu = document.getElementById('closeMenu');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const year = document.getElementById('year');
+      const navLinks = document.querySelectorAll('nav a');
+
+      year.textContent = new Date().getFullYear();
+
+      // Load saved theme
+      const saved = localStorage.getItem('hsn_theme');
+      if (saved === 'dark') document.documentElement.classList.add('dark');
+
+      themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('hsn_theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+
+      // Mobile menu
+      openMenu.addEventListener('click', () => {
+        mobileDrawer.classList.add('open');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+      closeMenu.addEventListener('click', () => { closeDrawer(); });
+      mobileDrawer.addEventListener('click', (e) => { if (e.target === mobileDrawer) closeDrawer(); });
+      function closeDrawer() { mobileDrawer.classList.remove('open'); mobileDrawer.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+
+      // Shrink header on scroll
+      let lastScroll = 0;
+      window.addEventListener('scroll', () => {
+        const sc = window.scrollY || window.pageYOffset;
+        if (sc > 40) header.classList.add('shrink'); else header.classList.remove('shrink');
+        lastScroll = sc;
+      });
+
+      // Update active nav link based on scroll position
+      function updateActiveNav() {
+        const sections = document.querySelectorAll('section');
+        let currentSection = '';
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          if (window.scrollY >= sectionTop) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === currentSection) {
+            link.classList.add('active');
+          }
+        });
+
+        // Update mobile menu active state too
+        const mobileLinks = document.querySelectorAll('.mobile-drawer nav a');
+        mobileLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === currentSection) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveNav);
+      updateActiveNav(); // Initialize
+
+      // Simple submit handler (non-sending; replace with API endpoint as needed)
+      window.onSubmit = function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = Object.fromEntries(new FormData(form).entries());
+        alert('Danke! Ihre Nachricht wurde (lokal) erfasst.\n\n' + JSON.stringify(data, null, 2));
+        form.reset();
+      };
+
+      // Accessibility: close menu with ESC
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+
+    })();
+  </script>
+</body>
+
+</html>
+
+
+
+<!-- START REFERENCES -->
+<section id="references" class="references-section container">
+  <div class="section-heading heading-border-accent">
+    <span class="section-preheading">Unsere Arbeit</span>
+    <h2 class="section-title">Referenzen</h2>
+    <p class="section-subtitle">Entdecken Sie unsere abgeschlossenen Projekte</p>
+  </div>
+
+  <!-- Filter Controls -->
+  <div class="references-filter">
+    <button class="filter-btn active" data-filter="all">Alle Anzeigen</button>
+    <button class="filter-btn" data-filter="doors">Türen</button>
+    <button class="filter-btn" data-filter="stairs">Treppen</button>
+    <button class="filter-btn" data-filter="gelander">Geländer</button>
+    <button class="filter-btn" data-filter="canopies">Vordächer</button>
+    <button class="filter-btn" data-filter="carports">Carports</button>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="references-grid">
+    <!-- Doors (5 images) -->
+    <div class="reference-item" data-category="doors">
+      <div class="reference-image">
+        <img
+          src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+          alt="Moderne Metalltür">
+        <div class="reference-overlay">
+          <span class="reference-category">Türen</span>
+          <button class="reference-view">Vergrößern</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reference-item" data-category="doors">
+      <div class="reference-image">
+        <img
+          src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+          alt="Sicherheitstür">
+        <div class="reference-overlay">
+          <span class="reference-category">Türen</span>
+          <button class="reference-view">Vergrößern</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add 3 more door images here -->
+
+    <!-- Stairs (5 images) -->
+    <div class="reference-item" data-category="stairs">
+      <div class="reference-image">
+        <img
+          src="https://images.unsplash.com/photo-1530026186672-85ccb462155d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+          alt="Moderne Treppe">
+        <div class="reference-overlay">
+          <span class="reference-category">Treppen</span>
+          <button class="reference-view">Vergrößern</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reference-item" data-category="stairs">
+      <div class="reference-image">
+        <img
+          src="https://images.unsplash.com/photo-1530026186672-85ccb462155d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+          alt="Außentreppe">
+        <div class="reference-overlay">
+          <span class="reference-category">Treppen</span>
+          <button class="reference-view">Vergrößern</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add 3 more stairs images here -->
+
+    <!-- Geländer (5 images) -->
+    <div class="reference-item" data-category="gelander">
+      <div class="reference-image">
+        <img
+          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+          alt="Edelstahlgeländer">
+        <div class="reference-overlay">
+          <span class="reference-category">Geländer</span>
+          <button class="reference-view">Vergrößern</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reference-item" data-category="gelander">
+      <div class="reference-image">
+        <img
+          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+          alt="Balkongeländer">
+        <div class="reference-overlay">
+          <span class="reference-category">Geländer</span>
+          <button class="reference-view">Vergrößern</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add 3 more geländer images here -->
+
+    <!-- Vordächer (3 images) -->
+    <div class="reference-item" data-category="canopies">
+      <div class="reference-image">
+        <img
+          src="https://images.unsplash.com/photo-1581094288338-231b058b38b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+          alt="Eingangsvordach">
+        <div class="reference-overlay">
+          <span class="reference-category">Vordächer</span>
+          <button class="reference-view">Vergrößern</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add 2 more canopies images here -->
+
+    <!-- Carports (2 images) -->
+    <div class="reference-item" data-category="carports">
+      <div class="reference-image">
+        <img
+          src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+          alt="Carport Modern">
+        <div class="reference-overlay">
+          <span class="reference-category">Carports</span>
+          <button class="reference-view">Vergrößern</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add 1 more carport image here -->
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close">&times;</span>
+      <img src="" alt="" class="lightbox-image">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+</section>
+<!-- END REFERENCES -->
+
+
+
+
+
+<!-- START career -->
+<section id="careers" class="career-section container">
+  <div class="section-heading heading-border-accent">
+    <span class="section-preheading">Unsere Geschichte</span>
+    <h2 class="section-title">Karriere</h2>
+    <p class="section-subtitle">Präzision in Metall – Von der Planung bis zur Montage</p>
+  </div>
+
+  <div class="career-content">
+    <div class="career-text">
+      <span class="career-subheading">„Von der kleinen Werkstatt zum starken Team“</span>
+
+      <div class="career-timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-content">
+            <p>Vor über fünf Jahren begann unsere Geschichte in einer kleinen Werkstatt mit nur
+              wenigen Maschinen und viel Leidenschaft für Metall. Was als Zwei-Mann-Betrieb
+              anfing, entwickelte sich Schritt für Schritt zu einem wachsenden Unternehmen.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2019-2020</div>
+          <div class="timeline-content">
+            <p>Schon die ersten Projekte – maßgeschneiderte Treppen und Geländer für
+              Privatkunden – fanden großen Anklang. Mit jeder neuen Aufgabe wuchs nicht nur
+              unsere Erfahrung, sondern auch unser Anspruch an Qualität und Präzision.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2021-2022</div>
+          <div class="timeline-content">
+            <p>Bald folgten Aufträge von Bauunternehmen und Architekten, die uns ihr Vertrauen
+              schenkten. Unser Team wuchs und wir investierten in moderne Technik und digitale
+              Planungstools.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">Heute</div>
+          <div class="timeline-content">
+            <p>Heute können wir auf mehr als 300 erfolgreich umgesetzte Projekte zurückblicken:
+              vom eleganten Balkongeländer über industrielle Hallenkonstruktionen bis hin zu
+              individuellen Sonderanfertigungen.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="career-image">
+      <div class="image-container">
+        <img
+          src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          alt="Unser Team bei der Arbeit">
+      </div>
+
+      <div class="team-quote">
+        <p class="quote-text">"Unser Geschäftsführer Younes El M. leitet das Unternehmen mit
+          Weitsicht, unterstützt von einem engagierten Team aus Metallbauern, Planern, Architekten
+          und kaufmännischen Kräften."</p>
+        <div class="quote-author">— HSN METALLBAU Team</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating decorative elements -->
+  <div class="floating-element floating-1"></div>
+  <div class="floating-element floating-2"></div>
+</section>
+<!-- END career -->

@@ -1,0 +1,156 @@
+<!-- ===== Services Section ===== -->
+<section id="services" class="services-section">
+    <h2 class="section-title">Unsere Leistungen</h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <!-- Service 1 -->
+            <div class="swiper-slide service-card">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Facades & Architecture">
+                <div class="service-info">
+                    <h3>Fassaden & Architektur</h3>
+                    <p>Wir entwerfen und bauen moderne Fassadenlösungen, die Funktionalität und Ästhetik vereinen.</p>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="swiper-slide service-card">
+                <img src="https://images.unsplash.com/photo-1611095963183-8b4785905a95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Custom Fabrications">
+                <div class="service-info">
+                    <h3>Sonderanfertigungen</h3>
+                    <p>Individuelle Metallkonstruktionen, präzise nach Kundenwunsch gefertigt.</p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="swiper-slide service-card">
+                <img src="https://images.unsplash.com/photo-1606232636988-26d20c9c6a3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Steel Structures">
+                <div class="service-info">
+                    <h3>Stahlkonstruktionen</h3>
+                    <p>Zuverlässige und langlebige Stahlstrukturen für Industrie und Gewerbe.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+
+    // Expand on hover
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('active');
+        });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('active');
+        });
+    });
+</script>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+    .services-section {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: var(--bg);
+        color: var(--text);
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        background: linear-gradient(45deg, #ff7e00, #ff4800);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Swiper */
+    .swiper {
+        padding-bottom: 3rem;
+    }
+
+    .swiper-slide {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition: all 0.4s ease;
+        cursor: pointer;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    /* Hidden info */
+    .service-info {
+        padding: 1rem;
+        background: #fff;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        transition: all 0.4s ease;
+        text-align: left;
+    }
+
+    .service-info h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #ff4800;
+    }
+
+    .service-info p {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        color: #333;
+    }
+
+    /* Active effect */
+    .service-card.active {
+        transform: scale(1.05);
+        z-index: 10;
+    }
+
+    .service-card.active img {
+        transform: scale(1.1);
+        filter: brightness(0.7);
+    }
+
+    .service-card.active .service-info {
+        bottom: 0;
+    }
+</style>
