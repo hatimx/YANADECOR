@@ -397,20 +397,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const phone = encodeURIComponent(contactForm.phone.value);
         const message = encodeURIComponent(contactForm.message.value);
 
-        // Validate required fields
+        // Vérification des champs obligatoires
         if (!name || !email || !message) {
-            alert('Bitte füllen Sie alle Pflichtfelder aus (Name, E-Mail, Nachricht)');
+            alert('Veuillez remplir tous les champs obligatoires (Nom, E-mail, Message)');
             return;
         }
 
-        // Create WhatsApp message
-        const whatsappMessage = `Neue Anfrage von HSN METALLBAU Website:%0A%0AName: ${name}%0AE-Mail: ${email}%0ATelefon: ${phone}%0ANachricht: ${message}`;
+        // Création du message WhatsApp
+        const whatsappMessage = `Nouvelle demande depuis le site YANA DECOR :%0A%0A` +
+            `Nom : ${name}%0A` +
+            `E-mail : ${email}%0A` +
+            `Téléphone : ${phone}%0A` +
+            `Message : ${message}`;
 
-        // WhatsApp URL - replace with your actual number
-        const whatsappURL = `https://wa.me/+4367761186630?text=${whatsappMessage}`;
+        // URL WhatsApp – remplacez par le numéro de Yana Decor
+        const whatsappURL = `https://wa.me/+212682438684?text=${whatsappMessage}`;
 
-        // Redirect to WhatsApp
+        // Redirection vers WhatsApp
         window.open(whatsappURL, '_blank');
+
     });
 });
 
