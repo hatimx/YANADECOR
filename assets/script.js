@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function () {
             `Message : ${message}`;
 
         // URL WhatsApp – remplacez par le numéro de Yana Decor
-        const whatsappURL = `https://wa.me/+212682438684?text=${whatsappMessage}`;
+        const whatsappURL = `https://wa.me/+212635910515?text=${whatsappMessage}`;
 
         // Redirection vers WhatsApp
         window.open(whatsappURL, '_blank');
