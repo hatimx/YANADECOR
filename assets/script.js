@@ -396,6 +396,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = encodeURIComponent(contactForm.email.value);
         const phone = encodeURIComponent(contactForm.phone.value);
         const message = encodeURIComponent(contactForm.message.value);
+        const service = encodeURIComponent(contactForm.service.value);
 
         // Vérification des champs obligatoires
         if (!name || !email || !message) {
@@ -407,6 +408,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const whatsappMessage = `Nouvelle demande depuis le site YANA DECOR :%0A%0A` +
             `Nom : ${name}%0A` +
             `E-mail : ${email}%0A` +
+            `Service : ${service}%0A` +
             `Téléphone : ${phone}%0A` +
             `Message : ${message}`;
 
